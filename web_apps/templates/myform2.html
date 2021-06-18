@@ -1,0 +1,14 @@
+{% extends 'index.html'%}
+{% block title %}My Second Page{% endblock %}
+{% block content %}
+<div class="col-md-6" style="margin: 0 auto;">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary" style="margin: o auto;display: block;">
+        SUBMIT
+        </button>
+    </form>
+</div>
+
+{% endblock %}
